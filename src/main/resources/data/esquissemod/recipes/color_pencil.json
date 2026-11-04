@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tool",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "P": {
+      "item": "esquissemod:warp_essence"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "  P",
+    " S ",
+    "G  "
+  ],
+  "result": {
+    "count": 1,
+    "item": "esquissemod:color_pencil"
+  }
+}

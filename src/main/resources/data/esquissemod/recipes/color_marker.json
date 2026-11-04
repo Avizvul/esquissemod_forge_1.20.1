@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tool",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "P": {
+      "item": "esquissemod:warp_essence"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "  P",
+    " C ",
+    "G  "
+  ],
+  "result": {
+    "count": 1,
+    "item": "esquissemod:color_marker"
+  }
+}

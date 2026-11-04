@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.avizvul.esquissemod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "esquissemod.refmap.json",
+  "mixins": [
+    "ForgeConnectionNetworkFilterMixin",
+    "FriendlyByteBufMixin",
+    "ItemEntityMixin",
+    "VanillaPacketSplitterMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

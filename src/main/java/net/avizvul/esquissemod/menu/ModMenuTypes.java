@@ -1,0 +1,28 @@
+package net.avizvul.esquissemod.menu;
+
+import net.avizvul.esquissemod.EsquisseMod;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
+
+public class ModMenuTypes {
+    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(Registries.MENU, EsquisseMod.MOD_ID);
+
+    public static final Supplier<MenuType<PencilCaseMenu>> PENCIL_CASE_MENU = MENUS.register("pencil_case_menu",
+            () -> new MenuType<>(PencilCaseMenu::new, net.minecraft.world.flag.FeatureFlags.DEFAULT_FLAGS));
+
+    public static final Supplier<MenuType<PrinterMenu>> PRINTER_MENU = MENUS.register("printer_menu",
+            () -> net.minecraftforge.common.extensions.IForgeMenuType.create((containerId, playerInventory, buf) ->
+                    new PrinterMenu(containerId, playerInventory, new ItemStackHandler(8), buf.readBlockPos())));
+
+    public static final Supplier<MenuType<AlbumMenu>> ALBUM_MENU = MENUS.register("album_menu",
+            () -> new MenuType<>(AlbumMenu::new, net.minecraft.world.flag.FeatureFlags.DEFAULT_FLAGS));
+
+    public static void register(IEventBus eventBus) {
+        MENUS.register(eventBus);
+    }
+}
